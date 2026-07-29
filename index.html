@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator - by Syan</title>
-    <link rel="icon" type="image/x-icon" href="images/titlelogo.png">
+    <link rel="icon" type="image/x-icon" href="images/3d-calculator.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,56 +18,59 @@
                 <div class="model">30110</div>
             </div>
         </div>
-        <div class="container2"></div>
+        <div class="container2" id="container2"></div>
         <div class="container3">
             <div class="line">
                 
                 <button class="btn firstline" onclick="calculator('root')">√</button>
                 <button class="btn firstline" onclick="calculator('ntop')">+/−</button>
                 <button class="btn firstline" onclick="calculator('backspace')">▶</button>
-                <button class="btn onac firstline" onclick="calculator('on')">ON/</button>
-                <button class="btn firstline" onclick="calculator('ce')">CE/</button>
+                <button class="btn onac firstline" onclick="on()">ON/AC</button>
+                <button class="btn cec firstline" onclick="ce('ce')">CE/C</button>
             </div>
             <div class="line">
                 
                 <button class="btn" onclick="calculator('grandtotal')">GT</button>
                 <button class="btn" onclick="calculator('markup')">MU</button>
-                <button class="btn" onclick="calculator('percent')">%</button>
-                <button class="btn" onclick="calculator('divide')">÷</button>
-                <button class="btn" onclick="calculator('memoryclear')">MC</button>
+                <button class="btn" onclick="calculator('%')">%</button>
+                <button class="btn" onclick="calculator('/')">÷</button>
+                <button class="btn" onclick="calculator('mc')">MC</button>
             </div>
             <div class="line">
                 
                 <button class="btn number" onclick="calculator(7)">7</button>
                 <button class="btn number" onclick="calculator(8)">8</button>
                 <button class="btn number" onclick="calculator(9)">9</button>
-                <button class="btn" onclick="calculator('multy')">x</button>
-                <button class="btn" onclick="calculator('memoryrcall')">MR</button>
+                <button class="btn" onclick="calculator('x')">x</button>
+                <button class="btn" onclick="calculator('mr')">MR</button>
             </div>
             <div class="line">
 
                 <button class="btn number" onclick="calculator(4)">4</button>
                 <button class="btn number" onclick="calculator(5)">5</button>
                 <button class="btn number" onclick="calculator(6)">6</button>
-                <button class="btn" onclick="calculator('minus')">-</button>
-                <button class="btn" onclick="calculator('minusfrommemory')">M-</button>
+                <button class="btn" onclick="calculator('-')">-</button>
+                <button class="btn" onclick="calculator('m-')">M-</button>
             </div>
             <div class="line">
 
                 <button class="btn number" onclick="calculator(1)">1</button>
                 <button class="btn number" onclick="calculator(2)">2</button>
                 <button class="btn number" onclick="calculator(3)">3</button>
-                <button class="btn" onclick="calculator('plus')">+</button>
-                <button class="btn" onclick="calculator('plusfrommemory')">M+</button>
+                <button class="btn" onclick="calculator('+')">+</button>
+                <button class="btn" onclick="calculator('m+')">M+</button>
             </div>
             <div class="line">
 
                 <button class="btn number" onclick="calculator(0)">0</button>
-                <button class="btn number" onclick="calculator('dzero')">00</button>
-                <button class="btn point" onclick="calculator('point')">.</button>
-                <button class="btn equals" onclick="output('equals')">=</button>
+                <button class="btn number" onclick="calculator('00')">00</button>
+                <button class="btn point " onclick="calculator('.')">.</button>
+                <button class="btn equals" onclick="output()">=</button>
             </div>
         </div>
     </div>
+
+
+    <script src="app.js"></script>
 </body>
 </html>

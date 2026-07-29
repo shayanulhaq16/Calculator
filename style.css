@@ -10,6 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-x: hidden
 }
 
 .calculator{
@@ -89,6 +90,7 @@ body{
     align-items: center;
     color: black;
     border: 2px solid #8d6e52;
+    background-color: #a08c7b;
     box-shadow: 0 0 5px #806852;
     margin: 0 3px;
 }
@@ -101,7 +103,6 @@ body{
 }
 .onac{
     font-size: 25px;
-
 }
 
 .firstline{
@@ -115,10 +116,51 @@ body{
 
 .point{
     font-size: 100px;
-    color: gray;
+    color: rgb(0, 0, 0);
     padding-bottom: 50px;
 }
 
 .line{
     display: flex;
+}
+
+
+@media (max-width: 520px) {
+    .calculator{
+        width: 400px;
+        height: 550px;
+    }
+    
+    .container3{
+        padding-top: 20px;
+    }
+    .container2{
+        padding-top: 20px;
+    }
+    
+    .btn{
+        width: 67px;
+        height: 40px;
+    }
+    
+    .onac{
+        font-size: 15px;
+    }
+    
+    .cec{
+        
+        font-size: 17px;
+    }
+    .equals{
+        width: 140px;
+        border-radius: 50px;
+    }
+    
+    .number{
+        padding-top:3px;
+    }
+    .point{
+        font-size: 60px;
+        padding-bottom: 30px;
+    }
 }
