@@ -127,7 +127,7 @@ body{
 
 @media (max-width: 520px) {
     .calculator{
-        width: 400px;
+        width: 360px;
         height: 550px;
     }
     
@@ -139,8 +139,12 @@ body{
     }
     
     .btn{
-        width: 67px;
+        width: 58px;
         height: 40px;
+    }
+
+    .charging{
+        width: 130px;
     }
     
     .onac{
@@ -152,7 +156,7 @@ body{
         font-size: 17px;
     }
     .equals{
-        width: 140px;
+        width: 124px;
         border-radius: 50px;
     }
     
