@@ -1,92 +1,93 @@
 var outputScreen = document.getElementById("container2");
 
-var firstNumber;
+var firstNumber = '';
 var operator = '';
-var secondNumber;
+var secondNumber = '';
 
 
 
 function calculator(parameter) {
 
-  if (parameter === '+' && operator === '') {
+  if (parameter === '+' && firstNumber !== '') {
     operator = parameter;
-    outputScreen.innerHTML += operator;
+    outputScreen.innerHTML = firstNumber + operator;
   }
-  else if (parameter === '-' && operator === '') {
+  else if (parameter === '-' && firstNumber !== '') {
     operator = parameter;
-    outputScreen.innerHTML += operator;
-    
-  }
-  else if (parameter === 'x' && operator === '') {
-    operator = parameter;
-    outputScreen.innerHTML += operator;
-    
-  }
-  else if (parameter === '/' && operator === '') {
-    operator = parameter;
-    outputScreen.innerHTML += operator;
-    
-  }
-  else if (parameter === '%' && operator === '') {
-    operator = parameter;
-    outputScreen.innerHTML += operator;
-    
-  }
+    outputScreen.innerHTML = firstNumber + operator;
 
-  else{
-    if(operator === ''){
-        firstNumber =  parameter;
-       outputScreen.innerHTML = firstNumber;
-      console.log('first: ', parameter);
-    }else if(parameter !== 'x' && parameter !== '/' && parameter !== '-' && parameter !== '+' && parameter !== '%'){
-      secondNumber = parameter;
-      outputScreen.innerHTML += secondNumber;
-      console.log('second: ', parameter);
-    }else{
-      operator = parameter;
-      outputScreen.innerHTML = firstNumber + operator;      
+  }
+  else if (parameter === 'x' && firstNumber !== '') {
+    operator = parameter;
+    outputScreen.innerHTML = firstNumber + operator;
+
+  }
+  else if (parameter === '/' && firstNumber !== '') {
+    operator = parameter;
+    outputScreen.innerHTML = firstNumber + operator;
+
+  }
+  else if (parameter === '%' && firstNumber !== '') {
+    operator = parameter;
+    outputScreen.innerHTML = firstNumber + operator;
+
+  }
+  
+  else {
+    if (operator === '' && parameter !== 'x' && parameter !== '/' && parameter !== '-' && parameter !== '+' && parameter !== '%') {
+      firstNumber += parameter;
+      outputScreen.innerHTML += parameter;
+    }
+    else if (parameter !== 'x' && parameter !== '/' && parameter !== '-' && parameter !== '+' && parameter !== '%') {
+      secondNumber += parameter;
+      outputScreen.innerHTML += parameter;
     }
   }
 
 }
 
 
-function output(){
-  if(operator === '' || firstNumber === '' || secondNumber === ''){
+function output() {
+  var result;
+  if (operator === '' || firstNumber === '' || secondNumber === '') {
     outputScreen.innerHTML = 'Error'
   }
-  else if(operator === '+'){
-    outputScreen.innerHTML = firstNumber + secondNumber;
+  else if (operator === '+') {
+    result = Number(firstNumber) + Number(secondNumber);
+    outputScreen.innerHTML = result;
   }
-  else if(operator === '/'){
-    outputScreen.innerHTML = firstNumber / secondNumber;
+  else if (operator === '/') {
+    result = Number(firstNumber) / Number(secondNumber);
+    outputScreen.innerHTML = result;
   }
-  else if(operator === 'x'){
-    outputScreen.innerHTML = firstNumber * secondNumber;
+  else if (operator === 'x') {
+    result = Number(firstNumber) * Number(secondNumber);
+    outputScreen.innerHTML = result;
   }
-  else if(operator === '-'){
-    outputScreen.innerHTML = firstNumber - secondNumber;
+  else if (operator === '-') {
+    result = Number(firstNumber) - Number(secondNumber);
+    outputScreen.innerHTML = result;
   }
-  firstNumber = '';
+  firstNumber = result;
   secondNumber = '';
   operator = '';
 }
 
-function on(){
+function on() {
   firstNumber = '';
   secondNumber = '';
   operator = '';
   outputScreen.innerHTML = '';
 }
 
-function ce(index){
-  if(firstNumber !== '' && operator === ''){
+function ce(index) {
+  if (firstNumber !== '' && operator === '') {
     firstNumber = '';
     outputScreen.innerHTML = '';
-  } else if(operator !== '' && secondNumber === ''){
+  } else if (operator !== '' && secondNumber === '') {
     operator = '';
     outputScreen.innerHTML = firstNumber;
-  }else{
+  } else {
     secondNumber = '';
     outputScreen.innerHTML = firstNumber + operator;
   }
