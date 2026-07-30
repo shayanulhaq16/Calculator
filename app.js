@@ -68,7 +68,9 @@ function output() {
     result = Number(firstNumber) - Number(secondNumber);
     outputScreen.innerHTML = result;
   }
-  firstNumber = result;
+
+
+  firstNumber = result.toString();
   secondNumber = '';
   operator = '';
 }
