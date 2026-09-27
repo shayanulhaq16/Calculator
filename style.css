@@ -114,10 +114,10 @@ body{
     border-radius: 50px;
 }
 
-.point{
-    font-size: 100px;
-    color: rgb(0, 0, 0);
-    padding-bottom: 50px;
+.point img{
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
 }
 
 .line{
@@ -163,8 +163,5 @@ body{
     .number{
         padding-top:3px;
     }
-    .point{
-        font-size: 60px;
-        padding-bottom: 30px;
-    }
+ 
 }

@@ -82,7 +82,7 @@ function on() {
   outputScreen.innerHTML = '';
 }
 
-function ce(index) {
+function ce() {
   if (firstNumber !== '' && operator === '') {
     firstNumber = '';
     outputScreen.innerHTML = '';
