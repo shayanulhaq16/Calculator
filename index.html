@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="images/3d-calculator.png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="calculator">
         <div class="container1">
@@ -21,15 +23,26 @@
         <div class="container2" id="container2"></div>
         <div class="container3">
             <div class="line">
-                
-                <button class="btn firstline" onclick="calculator('root')">√</button>
+
+                <button class="btn firstline" onclick="calculator('√')">√</button>
+                <!-- <span class="square-root">&radic;<span class="number">16</span></span> = 4 -->
+                <!-- .square-root {
+    display: inline-flex;
+    align-items: center;
+}
+.number {
+    border-top: 2px solid black; /* This creates the real top bar */
+    padding-left: 2px;
+    margin-left: -1px; /* Glues the bar to the tick sign */
+} -->
+
                 <button class="btn firstline" onclick="calculator('ntop')">+/−</button>
                 <button class="btn firstline" onclick="calculator('backspace')">▶</button>
                 <button class="btn onac firstline" onclick="on()">ON/AC</button>
                 <button class="btn cec firstline" onclick="ce()">CE/C</button>
             </div>
             <div class="line">
-                
+
                 <button class="btn" onclick="calculator('grandtotal')">GT</button>
                 <button class="btn" onclick="calculator('markup')">MU</button>
                 <button class="btn" onclick="calculator('%')">%</button>
@@ -37,7 +50,7 @@
                 <button class="btn" onclick="calculator('mc')">MC</button>
             </div>
             <div class="line">
-                
+
                 <button class="btn number" onclick="calculator(7)">7</button>
                 <button class="btn number" onclick="calculator(8)">8</button>
                 <button class="btn number" onclick="calculator(9)">9</button>
@@ -75,4 +88,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>

@@ -83,15 +83,20 @@ function on() {
 }
 
 function ce() {
+
+
+  
+  
+  
   if (firstNumber !== '' && operator === '') {
-    firstNumber = '';
-    outputScreen.innerHTML = '';
-  } else if (operator !== '' && secondNumber === '') {
-    operator = '';
+    firstNumber = firstNumber.slice(0, firstNumber.length - 1);
     outputScreen.innerHTML = firstNumber;
-  } else {
-    secondNumber = '';
-    outputScreen.innerHTML = firstNumber + operator;
+    } else if (operator !== '' && secondNumber === '') {
+        operator = '';
+        outputScreen.innerHTML = firstNumber;
+      } else {
+        secondNumber = secondNumber.slice(0, secondNumber.length - 1);
+        outputScreen.innerHTML = firstNumber + operator + secondNumber;
   }
 }
 
